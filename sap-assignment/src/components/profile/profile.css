@@ -1,0 +1,17 @@
+.profile{
+    padding-top: 5px;
+    position: absolute;
+    top: 60px;
+    right: 25px;
+    z-index: 1;
+    background-color: white;
+}
+
+.profile li{
+    box-shadow: 1px 0px 1px 0px rgb(236, 236, 236);
+    padding-top: 5px;
+}
+
+.profile li:hover{
+    background-color: rgb(230, 255, 255);
+}

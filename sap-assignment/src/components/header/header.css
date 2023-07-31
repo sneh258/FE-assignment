@@ -1,0 +1,11 @@
+input {
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 160px;
+    color: #CCC;
+}
+
+input:focus{
+    outline: none;
+}
