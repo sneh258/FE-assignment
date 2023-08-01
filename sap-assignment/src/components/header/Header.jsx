@@ -13,6 +13,7 @@ function Header({handleMenu}) {
   const [toggle,setToggle]=useState(false);
   
   const handleToggle=()=>{
+    console.log('clicked');
     setToggle(!toggle);
   };
   
@@ -36,8 +37,8 @@ function Header({handleMenu}) {
           >
         S
           </Avatar>
-          {toggle? <Profile/>:null}
         </div>
+        <div>{toggle? <Profile/>:null}</div>
       </div>
     </div>
 
