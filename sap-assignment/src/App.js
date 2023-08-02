@@ -17,6 +17,7 @@ function App() {
   const handleMenu=()=>{
     setMenu(!menu);
   };
+  console.log(localStorage.getItem('data'));
 
   return (
     <div className="App">

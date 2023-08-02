@@ -4,7 +4,7 @@ import CreateNewFolderOutlinedIcon from '@mui/icons-material/CreateNewFolderOutl
 import NoteAddOutlinedIcon from '@mui/icons-material/NoteAddOutlined';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-function Folder({ explorerData ,handleInsertNode}) {
+function Folder({ explorerData ,handleInsertNode,setFileId}) {
 
   const [expand, setExpand] = useState(false);
   const [showInput,setShowInput]=useState({
@@ -32,6 +32,7 @@ function Folder({ explorerData ,handleInsertNode}) {
 
   };
 
+
   if (explorerData.isFolder) {
     return (
       <div style={{ marginTop: 5, paddingLeft: '20px' }}>
@@ -55,14 +56,14 @@ function Folder({ explorerData ,handleInsertNode}) {
             )
           }
           {explorerData.items.map((exp) => {
-            return (<Folder handleInsertNode={handleInsertNode} explorerData={exp} key={exp.id} />);
+            return (<Folder handleInsertNode={handleInsertNode} explorerData={exp} key={exp.id} setFileId={setFileId} />);
           })}
         </div>
       </div>
     );
   }
   else {
-    return <span className='file'>📄{explorerData.name}</span>;
+    return <span className='file' onClick={()=>setFileId(explorerData.id)}>📄{explorerData.name}</span>;
   }
 }
 

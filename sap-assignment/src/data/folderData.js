@@ -44,7 +44,8 @@ const explorer = {
           id:'8',
           name: 'App.js',
           isFolder: false,
-          items: []
+          items: [],
+          content:'my name is sneha....'
         },
         {
           id:'9',
@@ -56,7 +57,8 @@ const explorer = {
           id:'10',
           name: 'styles.css',
           isFolder: false,
-          items: []
+          items: [],
+          content: 'hi this is swati...'
         }
       ]
     },

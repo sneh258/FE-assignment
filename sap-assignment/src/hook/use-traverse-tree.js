@@ -20,7 +20,27 @@ const useTraverseTree=()=>{
 
   }
 
-  return {insertNode};
+  function getNode(tree, nodeId) {
+    if (tree === undefined || tree === null || typeof tree !== 'object' || Object.keys(tree).length === 0)
+      return null;
+  
+    if (tree.id == nodeId) {
+      return tree;
+    }
+  
+    // Traverse through the tree to find the node
+    for (const item of tree.items) {
+      const node = getNode(item, nodeId);
+      if (node) {
+        return node;
+      }
+    }
+  
+    // Node not found
+    return null;
+  }
+  
+  return {insertNode,getNode};
 
 };
 
