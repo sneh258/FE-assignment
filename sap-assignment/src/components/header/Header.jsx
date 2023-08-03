@@ -5,9 +5,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import Avatar from '@mui/material/Avatar';
+import Badge from '@mui/material/Badge';
 import Profile from '../profile/Profile';
 import PropTypes from 'prop-types';
-import { deepOrange } from '@mui/material/colors';
+import { pink } from '@mui/material/colors';
 
 function Header({ handleMenu }) {
   const [toggle, setToggle] = useState(false);
@@ -31,13 +32,22 @@ function Header({ handleMenu }) {
         <div className='flex'><GroupAddIcon /><pre> INVITE TEAM MEMBERS</pre></div>
         <NotificationsNoneOutlinedIcon />
         <div className='pt-[-40px] cursor-pointer' onClick={() => { handleToggle(); }} >
-          <Avatar
-            sx={{ bgcolor: deepOrange[300], height: 30, width: 30 }}
-            alt="Remy Sharp"
-            src="/broken-image.jpg"
+          <Badge
+            overlap="circular"
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            badgeContent={<div style={{ background: 'green', width: 10, height: 10, borderRadius: '50%' }} />}
           >
-            S
-          </Avatar>
+            <Avatar
+              sx={{ bgcolor: pink[300], height: 30, width: 30 }}
+              alt="Remy Sharp"
+              src="/broken-image.jpg"
+            >
+        S
+            </Avatar>
+          </Badge>
         </div>
         <div>{toggle ? <Profile /> : null}</div>
       </div>
