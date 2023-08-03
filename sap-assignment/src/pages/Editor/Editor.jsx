@@ -22,7 +22,7 @@ function Editor({menu}) {
   return (
     <div className='shadow-black gap-2 flex h-screen'>
       <div className='shadow-white w-fit' style={{display:menu?'block':'none'}}><Hamburger handleInsertNode={handleInsertNode} exporerData={exporerData} setFileId={setFileId}/></div>
-      <div className={`shadow-white ${menu? 'w-3/4':'w-1'}`}><Notepad fileId={fileId}/></div>
+      <div className={`shadow-white ${menu? 'w-3/4':'w-full'}`}><Notepad fileId={fileId}/></div>
     </div>
   );
 }
