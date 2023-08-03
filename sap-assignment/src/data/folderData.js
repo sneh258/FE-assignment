@@ -17,13 +17,15 @@ const explorer = {
               id:'4',
               name: 'index.html',
               isFolder: false,
-              items: []
+              items: [],
+              content:'Lorem ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corrupti Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corruptidolor sit, ametLorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corrupti consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corrupti'
             },
             {
               id:'5',
               name: 'hello.html',
               isFolder: false,
-              items: []
+              items: [],
+              content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corrupti'
             }
           ]
         },
@@ -31,7 +33,8 @@ const explorer = {
           id:'6',
           name: 'public_nested_file',
           isFolder: false,
-          items: []
+          items: [],
+          content:'Lorem ipsum dLorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corruptiLorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corruptiLorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corruptiLorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corruptiolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corrupti'
         }
       ]
     },
