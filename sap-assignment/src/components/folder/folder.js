@@ -4,14 +4,16 @@ import NoteAddOutlinedIcon from '@mui/icons-material/NoteAddOutlined';
 import PropTypes from 'prop-types';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-function Folder({ explorerData, handleInsertNode, setFileId }) {
+function Folder({ explorerData, handleInsertNode, setFileId,isActive,setIsActive}) {
 
   const [expand, setExpand] = useState(false);
   const [showInput, setShowInput] = useState({
     visible: false,
     isFolder: null
   });
-
+  const handleActive=(id)=>{
+    setIsActive(id);
+  };
   const handleNewFolder = (e, t) => {
     e.stopPropagation();
     setExpand(true);
@@ -23,7 +25,6 @@ function Folder({ explorerData, handleInsertNode, setFileId }) {
 
   const onAddFolder = (e) => {
     if (e.keyCode === 13 && e.target.value) {
-      //add logic
       handleInsertNode(explorerData.id, e.target.value, showInput.isFolder);
       setShowInput({ ...showInput, visible: false });
 
@@ -35,7 +36,8 @@ function Folder({ explorerData, handleInsertNode, setFileId }) {
   if (explorerData.isFolder) {
     return (
       <div style={{ marginTop: 5, paddingLeft: '20px' }}>
-        <div className='folder' onClick={() => setExpand(!expand)}><span><KeyboardArrowDownIcon />{explorerData.name}</span>
+        <div className={isActive===explorerData.id?'active-folder':'folder'} onClick={() => {setExpand(!expand);
+          handleActive(explorerData.id);}}><span><KeyboardArrowDownIcon />{explorerData.name}</span>
           <div className='flex gap-4'>
             <button onClick={(e) => handleNewFolder(e, true)}><CreateNewFolderOutlinedIcon /></button>
             <button onClick={(e) => handleNewFolder(e, false)}><NoteAddOutlinedIcon /></button>
@@ -55,21 +57,25 @@ function Folder({ explorerData, handleInsertNode, setFileId }) {
             )
           }
           {explorerData.items.map((exp) => {
-            return (<Folder handleInsertNode={handleInsertNode} explorerData={exp} key={exp.id} setFileId={setFileId} />);
+            return (<Folder handleInsertNode={handleInsertNode} explorerData={exp} key={exp.id} setFileId={setFileId} isActive={isActive} setIsActive={setIsActive} />);
           })}
         </div>
       </div>
     );
   }
   else {
-    return <span className='file' onClick={() => setFileId(explorerData.id)}>📄{explorerData.name}</span>;
+    return <span className={isActive===explorerData.id?'active-file':'file'} onClick={() => {setFileId(explorerData.id);
+      setIsActive(explorerData.id);
+    }}>📄{explorerData.name}</span>;
   }
 }
 
 Folder.propTypes = {
   explorerData: PropTypes.object.isRequired,
   handleInsertNode: PropTypes.func.isRequired,
-  setFileId: PropTypes.number.isRequired
+  setFileId: PropTypes.func.isRequired,
+  isActive:PropTypes.number.isRequired,
+  setIsActive: PropTypes.func.isRequired
 };
 
 export default Folder;

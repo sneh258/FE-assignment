@@ -1,6 +1,5 @@
 .folder {
     margin-top: 6px;
-    /* background-color: rgb(200, 200, 200); */
     box-shadow: 1px 0px 1px 0px rgb(184, 181, 181);
     display: flex;
     align-items: center;
@@ -43,5 +42,27 @@
     margin-top: 5px;
     padding-left: 5px;
     display: flex;
+    cursor: pointer;
     flex-direction: column;
+  }
+
+  .active-file{
+    margin-top: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-left: 1px solid red;
+  }
+
+  .active-folder{
+    margin-top: 6px;
+    box-shadow: 1px 0px 1px 0px rgb(184, 181, 181);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    width: 300px;
+    cursor: pointer;
+    border-left: 1px solid red;
   }
