@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
 import React,{useState} from 'react';
 import { useEffect } from 'react';
 import ReactQuill from 'react-quill';
+import PropTypes from 'prop-types';
 import useTraverseTree from '../../hook/use-traverse-tree';
-import 'react-quill/dist/quill.snow.css'; // Import the styles for the editor
+import 'react-quill/dist/quill.snow.css';
 
 const Notepad = ({fileId}) => {
   const modules = {
@@ -32,6 +32,10 @@ const Notepad = ({fileId}) => {
   console.log(getNode(data,fileId));
   return <ReactQuill value={getNode(data,fileId)?.content??''} modules={modules}/>;
  
+};
+
+Notepad.propTypes={
+  fileId: PropTypes.number.isRequired
 };
 
 export default Notepad;

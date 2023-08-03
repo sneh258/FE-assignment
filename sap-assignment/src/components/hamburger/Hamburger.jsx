@@ -1,11 +1,11 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+import Proptypes from 'prop-types';
 import Folder from '../folder/folder';
 
-function Hamburger({handleInsertNode,exporerData,setFileId}) {
+function Hamburger({ handleInsertNode, exporerData, setFileId }) {
   return (
     <div>
       <div className='flex justify-between shadow-lg h-8'>
@@ -16,10 +16,16 @@ function Hamburger({handleInsertNode,exporerData,setFileId}) {
           <KeyboardDoubleArrowLeftIcon /></div>
       </div>
       <div>
-        <Folder explorerData={exporerData} handleInsertNode={handleInsertNode} setFileId={setFileId}/>
+        <Folder explorerData={exporerData} handleInsertNode={handleInsertNode} setFileId={setFileId} />
       </div>
     </div>
   );
 }
+
+Hamburger.propTypes = {
+  handleInsertNode: Proptypes.func.isRequired,
+  exporerData: Proptypes.object.isRequired,
+  setFileId: Proptypes.number.isRequired
+};
 
 export default Hamburger;

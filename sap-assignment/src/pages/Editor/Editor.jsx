@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
 import React,{useEffect, useState} from 'react';
 import Hamburger from '../../components/hamburger/Hamburger';
 import Notepad from '../../components/notepad/Notepad';
 import explorer from '../../data/folderData';
+import Proptypes from 'prop-types';
 import useTraverseTree from '../../hook/use-traverse-tree';
 
 
@@ -26,5 +26,9 @@ function Editor({menu}) {
     </div>
   );
 }
+
+Editor.propTypes={
+  menu: Proptypes.bool.isRequired
+};
 
 export default Editor;

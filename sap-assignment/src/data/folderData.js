@@ -45,20 +45,20 @@ const explorer = {
           name: 'App.js',
           isFolder: false,
           items: [],
-          content:'my name is sneha....'
+          content:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque fugit dolore eveniet porro minima necessitatibus in facilis ipsum quas sapiente cum, nulla quisquam temporibus aliquid, pariatur natus doloribus aliquam corrupti'
         },
         {
           id:'9',
           name: 'Index.js',
           isFolder: false,
-          items: []
+          items: [],
+          content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
         },
         {
           id:'10',
           name: 'styles.css',
           isFolder: false,
           items: [],
-          content: 'hi this is swati...'
         }
       ]
     },

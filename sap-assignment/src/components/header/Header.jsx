@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import './header.css';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -8,7 +6,7 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import Avatar from '@mui/material/Avatar';
 import Profile from '../profile/Profile';
-import explorer from '../../data/folderData';
+import PropTypes from 'prop-types';
 import { deepOrange } from '@mui/material/colors';
 
 function Header({ handleMenu }) {
@@ -47,5 +45,9 @@ function Header({ handleMenu }) {
 
   );
 }
+
+Header.propTypes={
+  handleMenu: PropTypes.func.isRequired
+};
 
 export default Header;
